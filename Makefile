@@ -1,7 +1,7 @@
 CXX = nvcc
 ARGS = 512
 
-all: clean build
+all: clean build run
 
 build:
 	$(CXX) src/bitonic_sort.cu -o bin/bitonic_sort.out
