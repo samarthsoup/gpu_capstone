@@ -10,6 +10,12 @@ Bitonic sort is a sorting technique that is very easily parallelised. As the siz
 
 3. Sorted array will also be stored in an 'output.txt' file.
 
+# Changing input size using CLI arguments:
+
+1. Go to the Makefile.
+
+2. Change the variable 'ARGS' to have any value you want(doesn't have to be a power of 2).
+
 ### This is how GPU compares with CPU for bitonic sort:
 ---
 
