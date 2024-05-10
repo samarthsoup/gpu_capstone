@@ -1,16 +1,18 @@
 # Instructions for running the program
 
-1. Navigate to the directory that contains the Makefile.
+1. Navigate to the directory that contains the 'run.sh' file.
 
-2. Run <code>make all</code> in the terminal. 
+2. Run <code>./run.sh</code> in the terminal. 
 
-3. Sorted array will also be stored in an 'output.txt' file.
+3. Sorted array will be stored in an 'output.txt' file.
 
 # Changing input size using CLI arguments:
 
-1. Go to the Makefile.
+1. Go to the 'run.sh' file.
 
 2. Change the variable 'ARGS' to have any value you want(doesn't have to be a power of 2).
+
+Running 'run.sh' without the 'ARGS' will also work(by default the value for 'ARGS' is 512 as mentioned in the Makefile).
 
 # Bitonic sort using GPU and Cuda
 
