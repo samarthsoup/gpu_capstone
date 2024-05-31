@@ -10,7 +10,8 @@
 
 #define MAX_THREADS_PER_BLOCK 1024
 
-void bitonicSortCPU(int* arr, int n) {
+void bitonicSortCPU(int* arr, int n) 
+{
     for (int k = 2; k <= n; k *= 2) {
         for (int j = k / 2; j > 0; j /= 2) {
             for (int i = 0; i < n; i++) {
@@ -36,7 +37,8 @@ void bitonicSortCPU(int* arr, int n) {
     }
 }
 
-__global__ void bitonicSortGPU(int* arr, int j, int k){
+__global__ void bitonicSortGPU(int* arr, int j, int k)
+{
     unsigned int i, ij;
 
     i = threadIdx.x + blockDim.x * blockIdx.x;
@@ -60,13 +62,15 @@ __global__ void bitonicSortGPU(int* arr, int j, int k){
     }
 }
 
-void printArray(int* arr, int size) {
+void printArray(int* arr, int size) 
+{
     for (int i = 0; i < size; ++i)
         std::cout << arr[i] << " ";
     std::cout << std::endl;
 }
 
-bool isSorted(int* arr, int size) {
+bool isSorted(int* arr, int size) 
+{
     for (int i = 1; i < size; ++i) 
     {
         if (arr[i] < arr[i - 1])
@@ -75,7 +79,8 @@ bool isSorted(int* arr, int size) {
     return true;
 }
 
-bool isPowerOfTwo(int num) {
+bool isPowerOfTwo(int num) 
+{
     return num > 0 && (num & (num - 1)) == 0;
 }
 
@@ -96,7 +101,8 @@ int nextPowerOfTwo(int n) {
 }
 
 
-int main() {   
+int main() 
+{   
     std::ifstream infile("data/generated_data.txt");
     if (!infile) {
         std::cerr << "Error opening file.\n";

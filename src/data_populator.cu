@@ -4,7 +4,8 @@
 #include <ctime>     
 #include <sstream>   
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) 
+{
     if (argc < 2) {
         std::cerr << "Usage: " << argv[0] << " <number of random numbers>\n";
         return 1;
